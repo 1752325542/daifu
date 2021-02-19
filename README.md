@@ -5,6 +5,7 @@
 	
 # 系统截图
 ![image](https://github.com/1752325542/daifu/blob/master/doc/1.png)
+![image](https://github.com/1752325542/daifu/blob/master/doc/9.png)
 ![image](https://github.com/1752325542/daifu/blob/master/doc/2.png)
 ![image](https://github.com/1752325542/daifu/blob/master/doc/3.png)
 ![image](https://github.com/1752325542/daifu/blob/master/doc/4.png)
