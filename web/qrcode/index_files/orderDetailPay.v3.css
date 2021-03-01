@@ -1,0 +1,613 @@
+.image-modal{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 202020;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 8rem 0rem;
+    overflow-y: auto;
+}
+.image-modal .btn-close{
+    position: absolute;
+    right: 2rem;
+    top: 1rem;
+    color: #ffffff;
+    display: block;
+    font-size: 2rem;
+    height: 3rem;
+    color: #ffffff;
+}
+.image-modal .btn-close:hover{
+    cursor: pointer;
+    box-shadow: none;
+    outline: none;
+}
+.image-modal img{
+    width: 100%;
+    position: relative;
+    margin: auto;
+    max-width: 42rem;
+}
+.image-modal .btn-know{
+    position: relative;
+    margin: 1rem auto;
+    height: 3rem;
+    color: #ffffff;
+    display: block;
+    font-size: 2rem;
+    background: #00B389;
+    border: solid 0.1rem #00B389;
+    border-radius: 0.2rem;
+}
+.image-modal .btn-know:hover,.image-modal .btn-know:active ,.image-modal .btn-know:focus {
+    background: rgba(1, 173, 107, 0.7);
+    color: #fff;
+    boder: 0px;
+    cursor: pointer;
+    box-shadow: none;
+    outline: none;
+}
+.layout_container {}
+
+.layout_container .layout_body {
+    padding: 1rem 3rem;
+}
+
+/* 顶部付款方式 */
+.layout_container .layout_body .paytype_box {
+    align-items: center;
+    padding: 0.5rem 0 1rem 0;
+    margin-bottom: 1rem;
+    border-bottom: solid 0.1rem #e8eaec;
+}
+
+.layout_container .layout_body .paytype_label {
+    text-align: left;
+    font-size: 1.6rem;
+}
+
+.layout_container .layout_body .paytype_label img {
+    width: 3.3rem;
+    padding-right: 0.3rem;
+    vertical-align: middle;
+}
+
+.layout_container .layout_body .paytype_content {
+    text-align: right;
+    font-size: 1.4rem;
+}
+/*金额提示*/
+.list-money .line-money .line-img{
+    width: 1.4rem;
+    margin-left: .8rem;
+}
+.list-money .line-money .line-tip{
+    margin-left: .1rem;
+    color: #FF9800;
+    font-size: 1.2rem;
+}
+
+@media screen and (max-width: 358px) {
+    .list-money {
+        height: 4.5rem;
+    }
+    .list-money .line-money .line-tip{
+        display: table-row;
+    }
+}
+/* 转账提示 */
+.layout_body .container_box .status_tips {
+    background: #FFF1E6;
+    font-size: 1.4rem;
+    color: #FF7600;
+    box-sizing: border-box;
+    line-height: 1.9rem;
+    text-align: center;
+    margin: 1rem 0px;
+}
+/* 订单详情样式 */
+.layout_body .container_box .detail_list {
+    display: flex;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    align-items: center;
+}
+
+.layout_body .container_box .detail_list .list_label {
+    width: 8.5rem;
+    text-align: left;
+    color: #959595;
+    font-size: 1.5rem;
+}
+
+.layout_body .container_box .detail_list .list_content {
+    flex: 1;
+    text-align: left;
+    font-size: 1.6rem;
+}
+
+/* 底部按钮样式 */
+
+.layout_operate {
+    text-align: center;
+    padding: 2rem;
+    border-top: solid 0.6rem #f2f2f3;
+}
+
+.layout_operate .text_operate {
+    font-size: 1.6rem;
+    color: #898989;
+
+}
+
+.layout_operate .text_operate span {
+    color: #00B389;
+    cursor: pointer;
+}
+
+.layout_operate .btn_operate button {
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+
+.overflow-hidden {
+    /* overflow: hidden; */
+}
+
+.layout_operate .btn_operate .btn-success {}
+
+/* 底部订单详情提示 */
+.layout_ordertips {
+    text-align: left;
+    padding: 1rem 2rem;
+}
+.layout_ordertips .ordertips_ordernum{
+    font-size: 1.4rem;
+}
+.layout_ordertips .ordertips_ordernum>div{
+    display: inline-block;
+    font-size: 1.4rem;
+}
+.layout_ordertips .ordertips_title {
+    font-size: 1.3rem;
+    color: rgba(77,85,104,1);
+    padding: 0.2rem 0;
+}
+.layout_ordertips .ordertips_tip {
+    font-size: 1.35rem;
+    color: #858585;
+    padding: 0.2rem 0;
+}
+.layout_ordertips .ordertips_item {
+    font-size: 1.3rem;
+    color: #858585;
+    padding: 0.2rem 0;
+}
+
+/* 跳转商家弹出框样式 */
+#merchant_modal .modal-container {
+    text-align: center;
+    padding: 3rem 1rem;
+    width: 22rem;
+}
+
+/* 更换账户弹出框样式 */
+#change_account_modal .modal-container {
+    padding: 2rem 2rem;
+    width: 30rem;
+}
+
+#change_account_modal .modal-container .container-header {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: left;
+    color: #17233d;
+}
+
+#change_account_modal .modal-container .container-body {
+    padding: 1rem;
+    text-align: left;
+}
+
+#change_account_modal .modal-container .container-body .title {
+    position: relative;
+    margin: 0.2rem auto 0.2rem auto;
+    color: #00B389;
+    font-size: 1.5rem;
+}
+
+
+#change_account_modal .modal-container .container-body .text-error {
+    font-size: 1.6rem;
+    display: none;
+}
+
+#change_account_modal .modal-container .container-body select {
+    width: 100%;
+    border: solid 1px #eee;
+    font-size: 1.6rem;
+    height: 3rem;
+    outline: none;
+    background: #ffffff;
+    border-radius: 0.5rem;
+}
+
+#change_account_modal .modal-container .container-body .liyou .item {
+    font-size: 14px;
+    position: relative;
+    padding: 0.6rem 0;
+}
+
+#change_account_modal .modal-container .container-footer {
+    padding: 1rem;
+    text-align: center;
+}
+
+#change_account_modal .modal-container .container-footer button {
+    display: inline-block;
+    margin: 0.5rem 0.5rem 0rem 0.5rem;
+}
+
+
+/* 取消订单弹出框样式 */
+#cancel_order_modal .modal-container {
+    padding: 2rem 2rem;
+    width: 30rem;
+}
+
+#cancel_order_modal .modal-container .container-header {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: left;
+    color: #17233d;
+}
+
+#cancel_order_modal .modal-container .container-body {
+    padding: 1rem;
+    text-align: left;
+}
+
+#cancel_order_modal .modal-container .container-body .title {
+    color: #999999;
+    position: relative;
+    margin: 0rem auto 0.8rem auto;
+    color: #00B389;
+    font-size: 1.5rem;
+}
+
+#cancel_order_modal .modal-container .container-body .text-error {
+    font-size: 1.6rem;
+    display: none;
+}
+
+
+#cancel_order_modal .modal-container .container-body .liyou .item {
+    font-size: 14px;
+    position: relative;
+    margin: .8rem 0;
+}
+
+#cancel_order_modal .modal-container .container-footer {
+    padding: 1rem;
+    text-align: center;
+}
+
+#cancel_order_modal .modal-container .container-footer button {
+    display: inline-block;
+    margin: 0.5rem 0.5rem 0rem 0.5rem;
+}
+
+/* 温馨提示的弹框 */
+#reminder_modal .modal-container {
+    padding: 1rem 2rem;
+}
+
+#reminder_modal .modal-container .container-body {
+    padding: 1rem;
+    text-align: left;
+}
+
+#reminder_modal .modal-container .container-body div {
+    padding: 0.3rem 0;
+}
+
+/* 引导提示的样式 */
+.guide_modal {
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 998;
+}
+
+/* 金额的引导提示 */
+.guide_money_box .guide_content1 {
+    width: 38rem;
+    height: auto;
+    max-width: 90vw;
+    position: absolute;
+    top: 11rem;
+    left: 1.5rem;
+    z-index: 1999;
+    cursor: pointer;
+}
+
+.guide_money_box .guide_arrow1 {
+    position: absolute;
+    width: 5rem;
+    top: 15rem;
+    left: 45vw;
+    z-index: 999
+}
+
+.guide_money_box .guide_desc1 {
+    position: absolute;
+    width: 38rem;
+    max-width: 80vw;
+    left: 2rem;
+    top: 20.5rem;
+    z-index: 999;
+}
+
+.guide_money_box .guide_hand1 {
+    position: absolute;
+    width: 3rem;
+    left: 45vw;
+    top: 13rem;
+    z-index: 999;
+    /*animation: mymove1 0.6s linear alternate infinite;*/
+    /*-webkit-animation: mymove1 0.6s linear alternate infinite;*/
+}
+
+@keyframes mymove1 {
+    0% {
+        left: 25rem;
+        top: 13rem;
+    }
+
+    100% {
+        left: 24.5rem;
+        top: 12.6rem;
+    }
+}
+
+
+/* 收款账号的引导提示 */
+.guide_bank_box .guide_content2 {
+    width: 38rem;
+    height: auto;
+    max-width: 90vw;
+    position: absolute;
+    top: 18rem;
+    left: 1rem;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.guide_bank_box .guide_arrow2 {
+    position: absolute;
+    width: 4rem;
+    top: 22rem;
+    left: 45vw;
+    z-index: 999;
+}
+
+.guide_bank_box .guide_desc2 {
+    position: absolute;
+    width: 38rem;
+    max-width: 80vw;
+    left: 1.6rem;
+    top: 27rem;
+    z-index: 999;
+}
+
+.guide_bank_box .guide_hand2 {
+    position: absolute;
+    width: 3rem;
+    left: 45vw;
+    top: 20rem;
+    z-index: 999;
+    /*animation: mymove2 0.6s linear alternate infinite;*/
+    /*-webkit-animation: mymove2 0.6s linear alternate infinite;*/
+}
+
+@keyframes mymove2 {
+    0% {
+        left: 24rem;
+        top: 20rem;
+    }
+
+    100% {
+        left: 23.5rem;
+        top: 19.6rem;
+    }
+}
+
+/* 移动端样式 */
+@media screen and (max-width:700px) {
+
+    .layout_container .layout_body {
+        padding: 1rem 1.2rem;
+    }
+
+    .layout_operate {
+        padding-top: 1rem;
+        padding-bottom: 0rem;
+    }
+
+    .layout_operate .btn_operate .btn-default,
+    .layout_operate .btn_operate .btn-success {
+        width: 100%;
+        height: 4rem;
+
+    }
+
+    /* 跳转商家弹框样式 */
+    #merchant_modal .modal-container {
+        text-align: center;
+        padding: 2rem 1rem;
+        width: 70%;
+    }
+
+    /* 更换账户弹框样式 */
+    #change_account_modal .modal-container {
+        padding: 2rem 2rem;
+        width: 70%;
+    }
+
+    #change_account_modal .modal-container .container-footer {
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    #change_account_modal .modal-container .container-footer button {
+        display: inline-block;
+        min-width: 8rem;
+    }
+
+    /* 取消订单弹框样式 */
+    #cancel_order_modal .modal-container {
+        padding: 2rem 2rem;
+        width: 70%;
+    }
+
+    #cancel_order_modal .modal-container .container-footer {
+        padding: 0.5rem;
+        text-align: center;
+    }
+
+    #cancel_order_modal .modal-container .container-footer button {
+        display: inline-block;
+        min-width: 8rem;
+    }
+
+    /* 温馨提示弹框样式 */
+    #reminder_modal .modal-container {
+        padding: 1rem 2rem;
+        width: 70%;
+    }
+
+    #reminder_modal .modal-container .container-footer button {
+        display: inline-block;
+        min-width: 8rem;
+    }
+
+    /* 金额的引导提示 */
+    .guide_money_box .guide_content1 {
+        width: 34rem;
+        height: auto;
+        max-width: 90vw;
+        position: absolute;
+        top: 6.3rem;
+        left: 1.5rem;
+        z-index: 999;
+        cursor: pointer;
+    }
+
+    .guide_money_box .guide_arrow1 {
+        position: absolute;
+        width: 4rem;
+        top: 10.2rem;
+        left: 45vw;
+        z-index: 999
+    }
+
+    .guide_money_box .guide_desc1 {
+        position: absolute;
+        width: 28rem;
+        max-width: 80vw;
+        left: 2rem;
+        top: 15.5rem;
+        z-index: 999;
+    }
+
+    .guide_money_box .guide_hand1 {
+        position: absolute;
+        width: 3rem;
+        left: 45vw;
+        top: 8rem;
+        z-index: 999;
+        /*animation: mymove1 0.6s linear alternate infinite;*/
+        /*-webkit-animation: mymove1 0.6s linear alternate infinite;*/
+    }
+
+    @keyframes mymove1 {
+        0% {
+            left: 25rem;
+            top: 8rem;
+        }
+
+        100% {
+            left: 24.5rem;
+            top: 7.6rem;
+        }
+    }
+
+    /* 收款账号的引导提示 */
+    .guide_bank_box .guide_content2 {
+        width: 34rem;
+        height: auto;
+        max-width: 90vw;
+        position: absolute;
+        top: 13.5rem;
+        left: 1rem;
+        z-index: 999;
+        cursor: pointer;
+    }
+
+    .guide_bank_box .guide_arrow2 {
+        position: absolute;
+        width: 4rem;
+        top: 17.5rem;
+        left: 45vw;
+        z-index: 999;
+    }
+
+    .guide_bank_box .guide_desc2 {
+        position: absolute;
+        width: 28rem;
+        max-width: 80vw;
+        left: 1.6rem;
+        top: 23rem;
+        z-index: 999;
+    }
+
+    .guide_bank_box .guide_hand2 {
+        position: absolute;
+        width: 3rem;
+        left: 45vw;
+        top: 16rem;
+        z-index: 999;
+        /*animation: mymove2 0.6s linear alternate infinite;*/
+        /*-webkit-animation: mymove2 0.6s linear alternate infinite;*/
+    }
+
+    @keyframes mymove2 {
+        0% {
+            left: 24rem;
+            top: 16rem;
+        }
+
+        100% {
+            left: 23.5rem;
+            top: 15.6rem;
+        }
+    }
+
+}
+
+.list_content .amountRadmon{
+    background-color: #03aa7e;
+    padding: 0 10px;
+    color: #fff;
+    font-weight: bold;
+    position: absolute;
+    z-index: 100;
+    font-size: 1.4rem;
+}
+.amountRadmon .radmonFont{
+    font-size: 1.2rem;
+    display: inline-block;
+}

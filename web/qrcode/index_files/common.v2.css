@@ -1,0 +1,518 @@
+/********************* 设置html和body样式 *********************/
+html {
+    font-size: 62.5%;
+}
+
+body {
+    min-width: 275px;
+    overflow-x: auto;
+    margin: 0;
+    padding: 0;
+    font-size: 1.4rem;
+    -webkit-font-smoothing: antialiased;
+    color: #303133;
+    background: #fff;
+    font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+}
+::-webkit-input-placeholder {
+    color: #A2A5B4;
+    font-size: 1.4rem;
+}
+
+:-moz-placeholder {
+    color: #A2A5B4;
+    font-size: 1.4rem;
+}
+
+::-moz-placeholder {
+    color: #A2A5B4;
+    font-size: 1.4rem;
+}
+
+:-ms-input-placeholder {
+    color: #A2A5B4;
+    font-size: 1.4rem;
+}
+
+/* 去掉ios中表单控件的上边的阴影 */
+input {
+    outline: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+input:-webkit-autofill,input:-internal-autofill-previewed, input:-internal-autofill-selected, textarea:-internal-autofill-previewed, textarea:-internal-autofill-selected, select:-internal-autofill-previewed, select:-internal-autofill-selected {
+    background-color: #ffffff !important;
+    background-image: none !important;
+    color: #333333 !important;
+    -webkit-box-shadow:0 0 0px 1000px #fff inset;
+}
+/* 页面公用样式 */
+.layout_container {
+    position: relative;
+}
+
+/* layout_header */
+.layout_container .layout_header {}
+
+/* layout_body */
+.layout_container .layout_body {}
+
+
+/* 引入的顶部bar样式 */
+.layout_header {
+    width: 100%;
+    height: 5rem;
+    padding: 0;
+    margin: 0;
+}
+
+/* 公用的顶部header样式 */
+.layout_header .header_bar {
+    height: 5rem;
+    line-height: 5rem;
+    background: #00B389;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.layout_header .header_bar .header_bar_logo {
+    position: absolute;
+    left: 2rem;
+}
+
+.layout_header .header_bar .header_bar_logo img {
+    width: 3rem;
+    vertical-align: middle;
+}
+
+.layout_header .header_bar .header_bar_title {
+    font-size: 1.8rem;
+}
+@media screen and (max-width:275px) {
+    .layout_header .header_bar .header_bar_title {
+        display: none;
+    }
+}
+.layout_header .header_bar .header_bar_text {
+    font-size: 1.4rem;
+    position: absolute;
+    right: 2rem;
+    cursor: pointer;
+}
+
+
+/* 错误文字 */
+.text-error {
+    color: #DD5E4D;
+    font-size: 1.2rem;
+    padding: 0.3rem 0;
+}
+
+/* 清除浮动 */
+.clearfix::after {
+    content: "";
+    height: 0;
+    display: block;
+    overflow: hidden;
+    clear: both;
+    font-size: 0;
+}
+
+/* flex */
+.gac-flex {
+    display: flex;
+}
+
+.gac-flex .flex-item {
+    flex: auto;
+}
+
+.gac-flex .flex-item-1 {
+    flex: 1;
+}
+
+.gac-flex .flex-item-2 {
+    flex: 2;
+}
+
+.gac-flex .flex-item-3 {
+    flex: 3;
+}
+
+.gac-flex .flex-item-4 {
+    flex: 4;
+}
+
+.gac-flex .flex-item-5 {
+    flex: 5;
+}
+
+.gac-flex .flex-item-6 {
+    flex: 6;
+}
+
+.gac-flex .flex-item-7 {
+    flex: 7;
+}
+
+.gac-flex .flex-item-8 {
+    flex: 8;
+}
+
+.gac-flex .flex-item-9 {
+    flex: 9;
+}
+
+.gac-flex .flex-item-10 {
+    flex: 10;
+}
+
+.gac-flex .flex-item-11 {
+    flex: 11;
+}
+
+.gac-flex .flex-item-12 {
+    flex: 12;
+}
+
+/* 常用按钮样式 */
+.btn-disabled {
+    background: #E4E4E4;
+    border: solid 0.1rem #E4E4E4;
+    border-radius: 0.2rem;
+    font-size: 1.3rem;
+    color: #a8a8a8;
+    height: 3rem;
+    box-sizing: border-box;
+    min-width: 10rem;
+    outline: none;
+    cursor: not-allowed;
+}
+
+.btn-default {
+    background: #fff;
+    border-radius:0.6rem;
+    border:0.05rem solid rgba(221,221,221,1);
+    font-size: 1.3rem;
+    color: #606266;
+    height: 3rem;
+    box-sizing: border-box;
+    min-width: 10rem;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-text {
+    background: none;
+    border: 0;
+    font-size: 1.3rem;
+    color: #909399;
+    height: 2rem;
+    box-sizing: border-box;
+    min-width: 10rem;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-success {
+    background: #00B389;
+    border: solid 0.1rem #00B389;
+    border-radius: 0.2rem;
+    font-size: 1.4rem;
+    color: #fff;
+    box-sizing: border-box;
+    height: 3rem;
+    min-width: 10rem;
+    outline: none;
+    cursor: pointer;
+}
+
+/* 公用的模态框 */
+.gac-modal {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9998;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+
+.gac-modal .modal-container {
+    background: #fff;
+    z-index: 9999;
+    width: 25rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.2rem;
+    color: #666666;
+    font-size: 1.4rem;
+    box-shadow: 0 0 0.1rem #eee;
+    text-align: center;
+    padding: 3rem 2.8rem 2rem 2.8rem;
+}
+
+.gac-modal.message_modal .modal-container {
+    text-align: center;
+}
+
+/* 全局使用的tips提示 */
+.gac-copy-tips {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-20%, 100%);
+    z-index: 1000;
+}
+
+.gac-copy-tips .copy-tips-arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    top: -0.4rem;
+    left: 1rem;
+    border-width: 0 0.5rem 0.5rem;
+    border-bottom-color: #556172;
+}
+
+.gac-copy-tips .copy-tips-content {
+    min-width: 6.6rem;
+    padding: 0.5rem 0;
+    text-align: center;
+    color: #fff;
+    font-size: 1.25rem;
+    cursor: pointer;
+    border-radius: 0rem;
+    background: #4c5669;
+    font-weight: 500;
+}
+
+.has_gac_copy_tips {
+   /* border-bottom: dashed 0.1rem #808695;*/
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+/* 全局的toast提示 */
+.gac-toast {
+    display: none;
+    background: rgba(0, 0, 0, 0.71);
+    position: fixed;
+    top: 28.2%;
+    left: 50%;
+    min-width: 6.6rem;
+    padding: 0.8rem 1.6rem;
+    text-align: right;
+    color: #ffffff;
+    font-size: 1.2rem;
+    border-radius: 0.4rem;
+    transform: translate(-50%, -50%);
+    z-index: 2019;
+    font-weight: 600;
+}
+
+
+.gac-toastRMB {
+    display: none;
+    background: rgba(0, 0, 0, 0.71);
+    position: fixed;
+    top: 38.2%;
+    left: 50%;
+    min-width: 7rem;
+    padding: 0.8rem 1.6rem;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.6rem;
+    border-radius: 0.4rem;
+    transform: translate(-50%, -50%);
+    z-index: 2019;
+    font-weight: 600;
+}
+
+.gac-toastCardNo {
+    display: none;
+    background: rgba(0, 0, 0, 0.71);
+    position: fixed;
+    top: 38.2%;
+    left: 50%;
+    min-width: 7rem;
+    padding: 0.8rem 1.6rem;
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.6rem;
+    border-radius: 0.4rem;
+    transform: translate(-50%, -50%);
+    z-index: 2019;
+    font-weight: 600;
+}
+
+/* 公用的radio样式 */
+
+.input-radio {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0 0.2rem;
+}
+
+.input-radio input[type="radio"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.input-radio label {
+    position: relative;
+    padding-left: 2.5rem;
+    cursor: pointer;
+    padding-top: 0.16rem;
+    vertical-align: middle;
+    font-size: 1.4rem;
+}
+
+
+.input-radio label:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.6rem;
+    height: 1.6rem;
+    content: '';
+    border-radius: 0.3rem;
+    border-radius: 100%;
+    border: 0.1rem solid #ddd;
+}
+
+.input-radio label:after {
+    opacity: 0;
+    content: '';
+    position: absolute;
+    width: 0.8rem;
+    height: 0.3rem;
+    background: transparent;
+    top: 0.5rem;
+    left: 0.4rem;
+    border: 0.2rem solid #fff;
+    border-top: 0;
+    border-right: 0;
+    transform: rotate(-45deg);
+}
+
+
+.input-radio input[type="radio"]:checked+label:after {
+    opacity: 1;
+}
+
+.input-radio input[type="radio"]:checked+label::before {
+    background: #1EAA74;
+    border: solid 0.1rem #1EAA74;
+}
+
+/* pc端显示效果 */
+@media screen and (min-width:700px) {
+    body {
+        background: url('../img/index_bg.png') no-repeat top;
+    }
+
+    ::-webkit-input-placeholder {
+        color: #A2A5B4;
+        font-size: 1.5rem;
+    }
+
+    :-moz-placeholder {
+        color: #A2A5B4;
+        font-size: 1.5rem;
+    }
+
+    ::-moz-placeholder {
+        color: #A2A5B4;
+        font-size: 1.5rem;
+    }
+
+    :-ms-input-placeholder {
+        color: #A2A5B4;
+        font-size: 1.5rem;
+    }
+
+    .layout_container {
+        width: 700px;
+        margin: 0 auto;
+        
+        background: #fff;
+        margin-bottom: 8rem;
+        padding-bottom: 3rem;
+        box-sizing: border-box;
+        border-left: solid 0.01rem #e1e6ea;
+        border-right: solid 0.01rem #e1e6ea;
+        border-bottom: solid 0.01rem #e1e6ea;
+    }
+
+    .layout_container .layout_header {
+        width: 700px;
+        margin: 0 auto;
+        margin-top: 2rem;
+    }
+
+    .layout_header .header_bar .header_bar_logo {
+        left: 3rem;
+    }
+
+    .layout_header .header_bar .header_bar_title {
+        font-size: 1.8rem;
+    }
+
+    .layout_header .header_bar .header_bar_text {
+        right: 3rem;
+    }
+
+    .layout_container .layout_body {}
+
+    /* 底部显示 */
+    .layout_footer {
+        height: 3rem;
+        line-height: 3rem;
+        font-size: 1.2rem;
+        color: #e8e0e0;
+        background: #323232;
+        text-align: center;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+    }
+}
+
+/* 手机端显示效果 */
+@media screen and (max-width:700px) {
+
+    /* 移动端弹出框样式 */
+    .gac-modal .modal-container {
+        width: 70%;
+    }
+
+    .layout_container .layout_header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+    }
+
+    .layout_container .layout_body {
+        margin-top: 5rem;
+        background: #fff;
+    }
+
+    .layout_footer {
+        display: none;
+    }
+}
