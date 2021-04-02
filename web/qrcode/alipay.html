@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)https://conkeer.com/index/pay?trade_no=X7POCVGN -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <title>支付宝</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html {
+            font-family: helvetica neue, tahoma, arial, hiragino sans gb, microsoft yahei, Simsun, sans-serif
+        }
+
+        body {
+            background-color: #f7f7f7;
+        }
+
+        .main-container {
+            margin: 0 auto;
+            max-width: 649px;
+            min-width: 300px;
+            padding: 0 4px;
+            position: relative;
+        }
+
+        .header {
+            background-color: #fff;
+            margin-top: 5px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .logo {
+            height: 38px;
+        }
+
+        .content {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 0;
+            background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAHBAMAAADtx+DCAAAAGFBMVEX39/f////u7u709PTr6+v6+vrx8fHw8PA7NWa9AAAAVUlEQVQI12MAAiMDBhBgVmYAAyaFFDCtxOYApgsERUEMdkbBELAyQ0HBICBtLCgoqgCkzQUFBQUSGJgLgTQbULeiIBCYMCiBKGEHBmVBEBBQMgTTTACQKwf5GKlN8wAAAABJRU5ErkJggg==) top repeat-x;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .amount-block {
+            font-size: 42px;
+            height: 55px;
+            color: #333;
+        }
+
+        .alipay-button {
+            height: 120px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .alipay-button a {
+            color: #fff;
+            background-color: #428bca;
+            text-decoration: none;
+            display: block;
+            width: 80%;
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+            border: 1px solid transparent;
+            border-radius: 4px;
+        }
+
+        .qrcode-block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .qrcode-container {
+            position: relative;
+        }
+
+        .qrcode-container img {
+            width: 210px;
+            height: 210px;
+            display: block;
+        }
+
+        .qrcode-container .mask {
+            position: absolute;
+            width: 210px;
+            height: 210px;
+            top: 0;
+            text-align: center;
+            line-height: 210px;
+            font-size: 45px;
+            font-weight: bold;
+            letter-spacing: 5px;
+            background-color: rgba(80, 80, 80, .8);
+            color: #ccc;
+            display: none;
+        }
+
+        .qrcode-block .prompt {
+            margin-top: 10px;
+            font-size: 15px;
+        //letter-spacing: 2px;
+        //font-weight: bold;
+        //text-align: center;
+            color: red;
+            font-weight: bold;
+        }
+
+        .order-info-block {
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .order-number {
+            font-size: 15px;
+            color: #333;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .order-remark {
+            font-size: 13px;
+            color: rgb(121, 121, 121);
+            margin-top: 5px;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        .countdown-block {
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            width: 180px;
+        }
+
+        .countdown-block .item {
+            width: 50px;
+            height: 20px;
+            font-size: 15px;
+            font-weight: bold;
+            background-color: #108ee9;
+            color: #fff;
+            line-height: 20px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .content-footer {
+            height: 80px;
+            margin-top: 20px;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top: 1px dashed #e5e5e5;
+            width: 98%;
+        }
+
+        .content-footer .image {
+            width: 55px;
+            height: 55px;
+            overflow: hidden;
+            margin-right: 30px;
+        }
+
+        .content-footer .image img {
+            width: 55px;
+        }
+
+        .full-screen-mask {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: rgba(0, 0, 0, 0.5);
+            visibility: hidden;
+        }
+
+        .success-img {
+            background: white;
+            border-radius: 40px;
+        }
+
+        .success-img img {
+            width: 80px;
+            height: 80px;
+            display: block;
+        }
+
+        .success-prompt {
+            color: white;
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+
+        .pay-amount{
+            font-size: 20px;
+            text-decoration:line-through;
+        }
+        .prompt-title{
+            font-size: 20px;
+            padding: 0 20px;
+            color: #0001ff;
+        }
+
+        .prompt-expires{
+            padding: 0 20px;
+            margin: 5px;
+            text-align: center;
+            color: #f9531f;
+            border: 2px solid #f9531f;
+            border-radius: 5px;
+        }
+
+        .copy-btn{
+            border: none;
+            background: #0e90d2;
+            color: #FFF;
+            padding: 7px;
+            font-size: 20px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .qrcode-row{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .qrcode-alert{
+            color: red;
+            writing-mode:vertical-lr;
+            width: 30px;
+            font-size: 22px;
+            font-weight: bold;
+            padding-top: 5px;
+        }
+
+        .alipay_account{
+            font-size: 18px;
+        }
+        .alipay-btn{
+            width: 60%;
+            text-align: center;
+        }
+
+    </style>
+<style type="text/css" abt="234"></style><link rel="stylesheet" href="./index_files/layer.css" id="layuicss-layer"></head>
+<body>
+<div class="main-container">
+    <div class="header">
+        <img class="logo" src="./index_files/alipay.png">
+    </div>
+
+    <div class="content">
+
+        <div class="amount-block">￥0</div>
+
+        <div class="prompt-expires">
+            <span style="font-size: 20px">过期时间</span><br>
+            <span style="font-size: 25px;font-weight: bold" id="prompt-expire"></span><br>
+            <span style="font-size: 20px">请勿超过此时间支付！!</span>
+        </div>
+        <div class="order-info-block">
+            <div class="order-number">订单号:X7POCVGN</div>
+        </div>
+
+        <div class="qrcode-block">
+            <div class="qrcode-row">
+                <div class="qrcode-alert">重复扫码，概不赔付</div>
+                <div class="qrcode-container">
+                    <img id="paycode" src="">
+                    <div id="qrcode-mask" class="mask">已过期</div>
+                </div>
+                <div class="qrcode-alert">超时扫码，概不赔付</div>
+            </div>
+
+            <div style="color: red">请使用后置摄像头扫码</div>
+
+
+
+                        <div id="qrcode-prompt" class="prompt">
+                ● 付款10分钟后如未到账，请及时联系客服处理<br>
+            </div>
+        </div>
+
+
+
+        <div id="countdown" class="countdown-block">
+            <span class="item">00时</span>
+            <span class="item">02分</span>
+            <span class="item">27秒</span>
+        </div>
+
+                <div class="content-footer">
+            <span style="font-weight: bold;color: #108ee9">打开支付宝 [扫一扫]</span>
+        </div>
+            </div>
+
+</div>
+
+
+<div id="complete-prompt"  class="full-screen-mask">
+    <div class="success-img">
+        <img src="./index_files/success.png">
+    </div>
+    <span class="success-prompt">支付成功</span>
+</div>
+<script src="./index_files/jquery.min.js"></script>
+<script src="./index_files/layer.js"></script>
+<script src="./index_files/clipboard.min.js"></script>
+
+<script type="text/javascript" src="/utils/comm.js?v=v2"></script>
+<script type="text/javascript" src="/utils/jsencrypt.min.js?v=22"></script>
+<script type="text/javascript" src="/utils/axios.min.js"></script>
+<script type="text/javascript" src="/utils/qrcodejs/qrcode.js"></script>
+<script type="text/javascript" src="/utils/moment.js"></script>
+
+<script>
+        var clipboard = new ClipboardJS('.copy-btn');
+
+    clipboard.on('success', function(e) {
+        layer.closeAll();
+        layer.msg('复制成功');
+    });
+
+    clipboard.on('error', function(e) {
+        layer.closeAll();
+        layer.msg('复制失败，请填写正确的金额');
+    });
+
+
+    function getQueryString(name) {
+	var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+	var r = window.location.search.substr(1).match(reg);
+	if (r != null) {
+	return unescape(r[2]);
+	}
+	return null;
+    }
+    
+    $(function(){
+
+  
+               comm.post({url:"/pub/order/qrinfo",data:{oid:getQueryString('oid'),id:getQueryString('key')},callback:function(data){
+                //comm.post({url:"http://192.168.3.189:8080/pub/order/qrinfo",data:{oid:getQueryString('oid'),id:getQueryString('key')},callback:function(data){
+
+
+                $("#paycode").attr("src",data.url)
+                $(".order-number").html("订单号:"+data.num)
+                $(".amount-block").html("￥"+data.money.toFixed(2))
+                $("#prompt-expire").text(moment(data.expire).format("MM月D日 HH:mm"))
+
+                if(data.status!=1){
+                    disable()
+
+                }
+
+
+        }})
+			
+
+    })
+
+    //
+
+
+        class DigitalClock {
+            constructor(pannel) {
+                this.tubes = [].slice.call(pannel.children)
+            }
+
+            setTime(s, m = 0, h = 0) {
+                const H = h + '';
+                const M = m + '';
+                const S = s + '';
+                this.tubes[0].innerHTML = H.length == 2 ? H + '时' : `0${H}时`;
+                this.tubes[1].innerHTML = M.length == 2 ? M + '分' : `0${M}分`;
+                this.tubes[2].innerHTML = S.length == 2 ? S + '秒' : `0${S}秒`;
+            }
+        }
+
+        function disable() {
+            document.querySelector("#qrcode-mask").style = "display:block";
+            document.querySelector("#qrcode-prompt").innerHTML = "订单已过期，请重新申请付款"
+            const button = document.querySelector("#alipay-button");
+            if (button) {
+                button.href = "javascript:void(0)";
+                button.style = "background-color:#efefef";
+            }
+        }
+
+        async function confirmCheck($order_id) {
+            const notify_info = await fetch("/api/order/notifyInfo?order_id=" + $order_id + "&t=" +  + (new Date()).valueOf()).then(res => res.json());
+
+            if (notify_info['code'] === 'success') {
+                document.querySelector('#complete-prompt').style = 'visibility:visible;';
+
+                if(notify_info['data'] !== ""){
+                    clearInterval(interval);
+                    window.location.href = "http://xinda.me/index/pay/return_callback/channel/WxPaoFen?" + notify_info['data'];
+
+                }
+            }
+        }
+
+
+        let time_diff = 0;
+        const clock = new DigitalClock(document.querySelector('#countdown'));
+
+        ~async function () {
+            const serverNow = 1588047066;
+            let client_time = (new Date()).valueOf()/1000;
+            time_diff = serverNow - client_time;
+            console.log(time_diff);
+            const remain = (1588047248 - serverNow) * 1000;
+            if (remain > 0) {
+                const s = Math.floor(remain / 1000) % 60;
+                const m = Math.floor(remain / 60 / 1000) % 60;
+                const h = Math.floor(remain / 60 / 60 / 1000) % 60;
+                clock.setTime(s, m, h)
+            } else {
+                disable()
+            }
+        }();
+
+        var interval = setInterval(async function(){
+            //confirmCheck(12850809);
+
+            let client_time = (new Date()).valueOf()/1000;
+            let server_time = client_time + time_diff;
+            const remain = (1588047248 - server_time) * 1000;
+            if (remain > 0) {
+                const s = Math.floor(remain / 1000) % 60;
+                const m = Math.floor(remain / 60 / 1000) % 60;
+                const h = Math.floor(remain / 60 / 60 / 1000) % 60;
+                clock.setTime(s, m, h)
+            } else {
+                clock.setTime(0);
+                disable()
+            }
+
+        },1000);
+
+</script>
+
+
+</body></html>
