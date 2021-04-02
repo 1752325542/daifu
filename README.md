@@ -31,7 +31,7 @@
 	3.	安装Mysql数据库
 		yum -y install mysql-server
 		service mysqld restart
-		并建创建数据库名称:daifu,将Postgres密码修改为：devops,数据库备分见：$path/daifu/doc/db.sql
+		数据库备分见：$path/daifu/doc/db.sql
 	4.	运行$path/daifu/cmd/main数据服务,及可以正常运行,注$path为环境变量
 	5.	管理员账号和密码都是：admin，系统中有：管理员、代理、码商(支持三级码商码结算)、卡商、商户、运营5种角色，跟据需要自行创建
 	
