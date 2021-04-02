@@ -59,7 +59,7 @@
 	5.	打款通知回调接口
   
 # 开发技术
-	1.	Golang+CentOS+Postgres+Nginx+Vue
+	1.	Golang+CentOS+Mysql+Nginx+Vue
 	2. 	商户API对接文档见doc/dev.html
 	3. 	平台数据采用RSA2加密传输（同支付宝业务流程一样）
 
