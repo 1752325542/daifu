@@ -9,18 +9,9 @@
 	}
 	comm.encode=function(data)
 	{
-		  console.log(data);
-
-		  for (let key in data) 
-		  {
-		    if(Array.isArray(data[key]))
-		        data[key]=encodeURIComponent(JSON.stringify(data[key]))
-		      else
-		    	  data[key]=encodeURIComponent(data[key])
-		  }
-
+		
 		  
-		  let string=JSON.stringify(data)
+		let string = encodeURIComponent(JSON.stringify(data))
 
 		  if(string.length==2)return ""
 		    //console.log(string);

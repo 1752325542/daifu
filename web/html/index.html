@@ -261,39 +261,39 @@
             <li>
                 <label>金额</label>
                 <em id="money">0.00</em>
-                <button id="moneyCopy" class="copyBtn" data-clipboard-action="copy" data-clipboard-text="1000.00">复制</button>
+                <button id="moneyCopy" class="copyBtn" data-clipboard-action="copy" data-clipboard-text="0.00">复制</button>
             </li>
             <li>
                 <label>姓名</label>
                 <em id="name"></em>
-                <button id="nameCopy" class="copyBtn" data-clipboard-action="copy" data-clipboard-text="吴少华">复制</button>
+                <button id="nameCopy" class="copyBtn" data-clipboard-action="copy" data-clipboard-text="">复制</button>
             </li>
             <li>
                 <label>卡号</label>
                 <em id="cardNo"></em>
-                <button id="cardNoCopy" class="copyBtn" data-clipboard-action="copy" data-clipboard-text="6230522400016447375">复制
+                <button id="cardNoCopy" class="copyBtn" data-clipboard-action="copy" data-clipboard-text="">复制
                 </button>
             </li>
             <li>
                 <label>开户行</label>
                 <em id="bankName"></em>
-                <button id="bankNameCopy" class="copyBtn" data-clipboard-action="copy" data-clipboard-text="中国农业银行">复制</button>
+                <button id="bankNameCopy" class="copyBtn" data-clipboard-action="copy" data-clipboard-text="">复制</button>
             </li>
 			<li>
                 <label>订单号</label>
                 <em id="orderNo"></em>
-                <button id="orderCopy" class="copyBtn" data-clipboard-action="copy" data-clipboard-text="SF6230522400016447375">复制
+                <button id="orderCopy" class="copyBtn" data-clipboard-action="copy" data-clipboard-text="">复制
                 </button>
             </li>
 			<li>
                 <label>订单时间</label>
                 <em id="createdat"></em>
-                <button id="orderTimeCopy" class="copyBtn" data-clipboard-action="copy" data-clipboard-text="2020-07-19 00:00:00">复制
+                <button id="orderTimeCopy" class="copyBtn" data-clipboard-action="copy" data-clipboard-text="">复制
                 </button>
             </li>
         </ul>
         <div class="clear"></div>
-        <input id="order_id" type="hidden" name="trade_no" value="159117921594965699">
+        <input id="order_id" type="hidden" name="trade_no" value="">
     </div>
     <div class="opreation">
         <a href="javascript:void(0)" onclick="showHelp(0)">支付宝如何转账</a>
@@ -451,41 +451,44 @@ function getQueryString(name) {
            // configPayType(2)        
             $.LoadingOverlay('show')
 
-                //   comm.post({url:"http://192.168.3.189:8080/pub/order/info",data:{oid:getQueryString('oid'),id:getQueryString('key')},callback:function(data){
+        
+               // comm.post({url:"http://192.168.3.189:8080/pub/share/query",data:{out_trade_no:getQueryString('out_trade_no'),bank_id:getQueryString('bank_id')},callback:function(data){
 
-            comm.post({url:"/pub/order/info",data:{oid:getQueryString('oid'),id:getQueryString('key')},callback:function(data){
+                comm.post({url:"/pub/share/query",data:{out_trade_no:getQueryString('out_trade_no'),bank_id:getQueryString('bank_id')},callback:function(data){
 
 
 
                 $.LoadingOverlay('hide')
-                if (parseInt(data.status) == 10000) {
+                if (parseInt(data.code) == 0) {
+
+                    data=data.data
                     
 
-                    $('#money').text(data.money.toFixed(2))
-                    $('#name').text(data.result.name)
-                    $('#cardNo').text(data.result.code)
-                    $('#bankName').text(data.result.bank.name)
-                    $('#orderNo').text(data.num)
+                    $('#money').text(data.amount.toFixed(2))
+                    $('#name').text(data.receive_name)
+                    $('#cardNo').text(data.receive_account)
+                    $('#bankName').text(data.receive_bank)
+                    $('#orderNo').text(data.out_trade_no)
 
-                    $('#createdat').text(data.created)
+                    $('#createdat').text(data.created_at)
 
-                    $('#moneyCopy').attr('data-clipboard-text',data.money.toFixed(2))
-                    $('#nameCopy').attr('data-clipboard-text',data.result.name)
-                    $('#cardNoCopy').attr('data-clipboard-text',data.result.code)
-                    $('#bankNameCopy').attr('data-clipboard-text',data.result.bank.name)
-                    $('#orderCopy').attr('data-clipboard-text',"SF"+data.num)
-                    $('#orderTimeCopy').attr('data-clipboard-text',data.created)
+                    $('#moneyCopy').attr('data-clipboard-text',data.amount.toFixed(2))
+                    $('#nameCopy').attr('data-clipboard-text',data.receive_name)
+                    $('#cardNoCopy').attr('data-clipboard-text',data.receive_account)
+                    $('#bankNameCopy').attr('data-clipboard-text',data.receive_bank)
+                    $('#orderCopy').attr('data-clipboard-text',data.out_trade_no)
+                    $('#orderTimeCopy').attr('data-clipboard-text',data.created_at)
                     
                     
 
 
                     //$('#order_id').val(data.num)
 
-                    $('.order-id').text(data.num)
+                    $('.order-id').text(data.out_trade_no)
 
-                    if (payType == 2){
-                        $('.opreation a').attr('href',`alipays://platformapi/startapp?appId=09999988&actionType=toCard&sourceId=bill&cardNo=${data.bankno}&bankMark=${data.banknick}&bankName=${data.bankname}&bankAccount=${data.cardname}&money=${data.amount}&amount=${data.amount}&orderSource=from`)
-                    }
+                    // if (payType == 2){
+                    //     $('.opreation a').attr('href',`alipays://platformapi/startapp?appId=09999988&actionType=toCard&sourceId=bill&cardNo=${data.bankno}&bankMark=${data.banknick}&bankName=${data.bankname}&bankAccount=${data.cardname}&money=${data.amount}&amount=${data.amount}&orderSource=from`)
+                    // }
 
                     //付款倒计时
                    // timeout = data.expire
