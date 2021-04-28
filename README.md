@@ -1,7 +1,8 @@
 # 使用说明
 	1. 支持宝塔Linux面板
 	2. 视频效果见doc目录：中行.mp4,工行.mp4,建行.mp4,农行.mp4,支付宝.mp4
-	3. 售后服务请联系 Telegram：@live0086
+	3.支持印度paytm自动转账，自动收款回调
+	4. 售后服务请联系 Telegram：@live0086
 # 转账App截图
 ![image](https://github.com/1752325542/daifu/blob/master/doc/1x.png)
 ![image](https://github.com/1752325542/daifu/blob/master/doc/2x.png)
