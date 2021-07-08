@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<!-- saved from url=(0098)https://capi.oiipay.com/Pay/BankCashier?OrderNo=AUOIhH8CdgcUQJyG3WwdRetw6iOAJZPwB%2FdwQ%2BKGxbc%3D -->
+<html class="html_pc_set"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+
+    收银台
+</title>
+
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no viewport-fit=cover">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+<meta name="renderer" content="webkit">
+
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+
+<meta content="keyword" name="keywords">
+
+<link rel="icon" type="image/ico" href="https://capi.oiipay.com/Pay/favicon.ico.css">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<meta name="full-screen" content="true">
+
+<meta name="screen-orientation" content="portrait">
+
+<meta name="x5-fullscreen" content="true">
+
+<meta name="360-fullscreen" content="true">
+
+<meta content="telephone=no" name="format-detection">
+<style>
+
+
+        * {
+            margin: 0;
+            padding: 0 touch-action: manipulation;
+            /* 以CSS touch-action: manipulation禁止double-tap手勢 */
+            -ms-touch-action: none;
+            -moz-user-select: none;
+            /* 禁止複製選取文字 for Firefox */
+            
+            /* 禁止複製選取文字  for Chrome */
+            moz-user-select: -moz-none;
+            -o-user-select: none;
+            -khtml-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+        }
+
+        body {
+            margin: 0px;
+            /*              background-image: url(img/all.jpg);
+        background-position-y: 36vw;*/
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            width: 100%;
+            overflow-x: hidden;
+            /*    overflow-y: hidden;*/
+        }
+
+        ul {
+            padding: 0;
+        }
+
+            ul li {
+                display: table;
+                font-family: "SF Pro TC","SF Pro Display","SF Pro Icons","PingFang TC","Helvetica Neue","Helvetica","Arial",sans-serif;
+                font-size: 4vw;
+                color: #616161;
+            }
+
+        .font_seting, h1, h3, h4, h5, p, span {
+            font-family: "SF Pro TC","SF Pro Display","SF Pro Icons","PingFang TC","Helvetica Neue","Helvetica","Arial",sans-serif;
+            text-align: center;
+            z-index: 1;
+        }
+
+        h3 {
+            text-align: left;
+            padding-left: 7vw;
+            color: #ffffff87;
+            font-weight: 400;
+            font-size: 7vw;
+        }
+
+        h1 {
+            font-size: 11.6vw;
+            color: white;
+            letter-spacing: 0vw;
+            font-weight: bold;
+            padding-top: 0vw;
+        }
+
+        h4 {
+            color: white;
+            font-size: 6.1vw;
+            font-weight: 500;
+            /*padding-top: 2.6vw;*/
+        }
+
+        hr {
+            margin-top: 6vw;
+            margin-bottom: 6vw;
+            height: 0.3vw;
+        }
+
+        p, span {
+            width: 70vw;
+            color: black;
+            font-size: 4.2vw;
+            margin: 0 auto;
+            padding-top: 11vw;
+            line-height: 5.6vw;
+            font-weight: 400;
+            letter-spacing: 0.2vw;
+        }
+
+        .button_color_green, .button_color_black, .button_color_red, .button_color_white {
+            font-family: "SF Pro TC","SF Pro Display","SF Pro Icons","PingFang TC","Helvetica Neue","Helvetica","Arial",sans-serif;
+            text-align: center;
+            -webkit-border-radius: 999px;
+            -moz-border-radius: 999px;
+            border-radius: 999px;
+            height: 12vw;
+            width: 37vw;
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
+            text-align: center;
+            color: white;
+            text-align: center;
+            margin: 0 auto;
+            font-size: 5vw;
+            margin-top: 10.3vw;
+            margin-bottom: 10.3vw;
+            line-height: 11.5vw;
+        }
+
+        .button_color_purple {
+            background-color: #4a1bbbcc;
+        }
+
+        .button_color_green {
+            background-color: #25d84f;
+        }
+
+        .button_color_black {
+            background-color: #00000054;
+        }
+
+        .button_color_red {
+            background-color: red;
+        }
+
+        /* iphone 圖垂直 */
+        .iphone_vertical_size {
+            width: 68.266vw;
+            display: block;
+        }
+
+        .iphonex_horizontal_size {
+            width: 89.9vw;
+            position: relative;
+            margin: 0 auto;
+            display: block;
+        }
+
+
+        /* zfb */
+        #zfb_bg {
+            width: 100%;
+            height: 80vw;
+            background: -webkit-linear-gradient(#1d69e3,white);
+            background: -o-linear-gradient(#1d69e3,white);
+            background: -moz-linear-gradient(#1d69e3,white);
+            background: linear-gradient(#1d69e3,white);
+            position: absolute;
+            top: 0vw;
+        }
+
+            #zfb_bg img {
+                width: 16vw;
+                position: relative;
+                margin: 0 auto;
+                height: auto;
+                display: block;
+                margin-top: 8vw;
+            }
+
+
+        /* bank */
+        #bank_bg {
+            width: 100%;
+            height: 80vw;
+            background: -webkit-linear-gradient(#7c82ad,white);
+            background: -o-linear-gradient(#7c82ad,white);
+            background: -moz-linear-gradient(#7c82ad,white);
+            background: linear-gradient(#7c82ad,white);
+            position: absolute;
+            top: 0vw;
+        }
+
+            #bank_bg img {
+                width: 26vw;
+                position: relative;
+                margin: 0 auto;
+                height: auto;
+                display: block;
+                margin-top: 8vw;
+            }
+
+
+
+        /* wechat */
+        #wechat_bg {
+            width: 100%;
+            height: 80vw;
+            background: -webkit-linear-gradient(#0dca24,white);
+            background: -o-linear-gradient(#0dca24,white);
+            background: -moz-linear-gradient(#0dca24,white);
+            background: linear-gradient(#0dca24,white);
+            position: absolute;
+            top: 0vw;
+        }
+
+            #wechat_bg img {
+                width: 16vw;
+                position: relative;
+                margin: 0 auto;
+                height: auto;
+                display: block;
+                margin-top: 8vw;
+            }
+
+
+        #pay_info {
+            width: 92vw;
+            height: 101vw;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            border-radius: 15px;
+            background-color: white;
+            position: relative;
+            margin-top: 44vw;
+            left: 50%;
+            margin-left: -46vw;
+            -webkit-box-shadow: 0px 10px 41px -17px rgba(29,105,227,0.38);
+            -moz-box-shadow: 0px 10px 41px -17px rgba(29,105,227,0.38);
+            box-shadow: 0px 10px 41px -17px rgba(29,105,227,0.38);
+        }
+
+        #first_hr {
+            margin-top: 2vw;
+        }
+
+        #order_id {
+            font-family: "SF Pro TC","SF Pro Display","SF Pro Icons","PingFang TC","Helvetica Neue","Helvetica","Arial",sans-serif;
+            position: relative;
+            top: 0vw;
+            margin: 0 auto;
+            width: 100%;
+            height: 10vw;
+            /* background: red; */
+            text-align: center;
+            padding-top: 6vw;
+        }
+
+            #order_id span {
+                font-size: 4vw;
+                color: #bbc0cd;
+            }
+
+                #order_id span:nth-child(1) {
+                    margin-right: 1vw;
+                    color: #8d8e8f;
+                }
+
+        #remarks {
+            width: 81vw;
+            height: auto;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            border-radius: 15px;
+            border-width: 0.5vw;
+            border-style: solid;
+            border-color: #e6e6e6;
+            background-color: white;
+            position: relative;
+            top: 1vw;
+            left: 50%;
+            margin-left: -45vw;
+            padding: 4vw;
+            padding-bottom: 4vw;
+            margin-bottom: 10vw;
+        }
+
+        .title {
+            font-size: 4.5vw;
+            font-weight: bold;
+            padding-left: 3.5vw;
+            padding-right: 2.5vw;
+        }
+
+        .title_money {
+            vertical-align: 1.5vw;
+        }
+
+        .timer_title {
+            display: block;
+            text-align: center;
+            padding-top: 5vw;
+        }
+
+        .timer_number {
+            display: block;
+            margin-top: -1vw;
+            font-family: arial;
+            letter-spacing: -0.5vw;
+            font-size: 13vw;
+        }
+
+        .zfb_timer_color {
+            color: #1e68e3;
+        }
+
+        .bank_timer_color {
+            color: #0fca23;
+        }
+
+        .pay_data {
+            font-size: 3.8vw;
+            color: #787878;
+            font-weight: 500;
+        }
+
+        .pay_data_money {
+            font-size: 9vw;
+            font-weight: bold;
+            letter-spacing: -0.2vw;
+            line-height: 7.5vw;
+            color: red;
+            font-family: arial;
+        }
+
+        .button {
+            font-family: "SF Pro TC","SF Pro Display","SF Pro Icons","PingFang TC","Helvetica Neue","Helvetica","Arial",sans-serif;
+            -webkit-border-radius: 99vw;
+            -moz-border-radius: 99vw;
+            border-radius: 99vw;
+            width: 24vw;
+            float: right;
+            height: 10vw;
+            background: #92a8ce;
+            text-align: center;
+            line-height: 10vw;
+            margin-right: 3.5vw;
+            font-size: 3.8vw;
+            font-weight: bold;
+            color: white;
+            top: -2vw;
+            position: relative;
+            letter-spacing: 0.2vw;
+        }
+
+
+        #tutorials_button {
+            font-family: "SF Pro TC","SF Pro Display","SF Pro Icons","PingFang TC","Helvetica Neue","Helvetica","Arial",sans-serif;
+            -webkit-border-radius: 99vw;
+            -moz-border-radius: 99vw;
+            border-radius: 99vw;
+            width: 37vw;
+            height: 10vw;
+            /*background: #607db1;*/
+            text-align: center;
+            line-height: 10vw;
+            font-size: 3.8vw;
+            font-weight: bold;
+            color: white;
+            top: 4vw;
+            position: relative;
+            letter-spacing: 0.2vw;
+            margin: 0 auto;
+        }
+
+        .bank_tutorials_button {
+            background: #607db1;
+        }
+
+        .zfb_tutorials_button {
+            background: #607db1;
+        }
+
+        .wechat_tutorials_button {
+            background: #1bbf28;
+        }
+
+        .slideInUp {
+            animation: slideInUp;
+        }
+
+        .slideOutDown {
+            animation: slideOutDown;
+        }
+
+        .fadeOut {
+            animation: fadeOut;
+        }
+
+        .bold {
+            font-weight: bold;
+            color: red;
+            padding-left: 1vw;
+            padding-right: 1vw;
+        }
+
+        .alert_mobile {
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            animation-timing-function: ease;
+            -webkit-animation-timing-function: ease;
+            -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+            width: 100%;
+            height: 118vw;
+            position: absolute;
+            bottom: 0vw;
+            z-index: 1;
+            background: white;
+            display: none;
+        }
+
+        .alert_pc {
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            animation-timing-function: ease;
+            -webkit-animation-timing-function: ease;
+            -webkit-animation-duration: 0.2s;
+            animation-duration: 0.2s;
+            width: 80%;
+            height: 49vw;
+            position: absolute;
+            z-index: 1;
+            background: white;
+            top: 50%;
+            left: 50%;
+            margin: -50% 0 0 -40%;
+            display: none;
+        }
+
+            .alert_pc > #window_bar > span {
+                font-size: 3vw;
+                line-height: 6vw;
+            }
+
+            .alert_pc > #window_bar {
+                height: 6vw;
+            }
+
+            .alert_pc > #content > span {
+                font-size: 3.5vw;
+                line-height: 5vw;
+                padding-top: 6vw;
+            }
+
+            .alert_pc > #alert_button {
+                width: 50vw;
+                font-size: 4vw;
+                height: 9vw;
+                line-height: 9vw;
+            }
+
+
+        #content span {
+            font-size: 5vw;
+            text-align: center;
+            display: block;
+            letter-spacing: 0.5vw;
+            line-height: 6.5vw;
+            width: 65vw;
+        }
+
+        #alert_button {
+            width: 80vw;
+            height: 15vw;
+            position: relative;
+            margin: 0 auto;
+            display: block;
+            text-align: center;
+            line-height: 15vw;
+            float: none;
+            margin-top: 9vw;
+            margin-bottom: 9vw;
+            background: #2fd02f;
+            font-size: 7vw;
+            font-weight: bold;
+            letter-spacing: 0vw;
+        }
+
+        #window_bar {
+            height: 10vw;
+            width: 100%;
+            background: #f3f3f3;
+        }
+
+            #window_bar span {
+                font-size: 5vw;
+                line-height: 10vw;
+                padding-left: 3vw;
+                color: #6d6d6d;
+            }
+
+        #blur_bg {
+            width: 100vw;
+            position: absolute;
+            z-index: 1;
+            top: 0vw;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+            display: none;
+        }
+
+
+        .html_pc_set {
+            height: 0vw;
+            transform: scale(0.25);
+            width: auto;
+        }
+
+        #wrapper {
+            height: auto;
+            position: absolute;
+            top: 0vw;
+            width: 100%;
+            overflow: hidden;
+            background: white;
+        }
+
+        .copy {
+            cursor: pointer;
+        }
+
+
+        .pay-block {
+            width: 85vw;
+            height: 40vw;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            border-radius: 15px;
+            background-color: white;
+            position: relative;
+            margin-top: 44vw;
+            left: 50%;
+            margin-left: -46vw;
+            -webkit-box-shadow: 0px 10px 41px -17px rgba(29,105,227,0.38);
+            -moz-box-shadow: 0px 10px 41px -17px rgba(29,105,227,0.38);
+            box-shadow: 0px 10px 41px -17px rgba(29,105,227,0.38);
+            font-size: 1rem;
+
+
+        }
+
+
+
+
+    </style>
+<style type="text/css" abt="234"></style><script>//console.log('a')
+</script><script>//remove baidu search ad
+var _countAA = 0
+function doBBBd(){}
+doBBBd()
+document.addEventListener('keyup', function(){_countAA-=10;doBBBd()}, false)
+document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
+
+</script></head>
+<body style="">
+<div id="wrapper">
+<div id="bank_bg">
+<img src="./index_files/bank_logo.png">
+<div id="tutorials_button" class="bank_tutorials_button" onclick="playVideo()">
+查看转账教程
+</div>
+</div>
+<div id="pay_info" style="display:none ">
+<span class="title timer_title">付款倒计时</span>
+<h1 class="timer_number bank_timer_color countdown">14:06</h1>
+<hr noshade="false" size="1" width="100%" color="#f2f2f2" id="first_hr">
+<span class="title">姓名</span><span class="bankAccount pay_data"></span>
+<div class="button copy copy-bankAccount" data-clipboard-text="">点击复制</div>
+<hr noshade="false" size="1" width="100%" color="#f2f2f2">
+<span class="title">卡号</span><span class="cardNo pay_data"></span>
+<div class="button copy copy-cardNo" data-clipboard-text="">点击复制</div>
+<hr noshade="false" size="1" width="100%" color="#f2f2f2">
+<span class="title">银行</span><span class="bankName pay_data"></span>
+<hr noshade="false" size="1" width="100%" color="#f2f2f2">
+<span class="title title_money">金额</span><span class="amount pay_data_money"></span>
+<div class="button copy copy-amount" data-clipboard-text="100">点击复制</div>
+</div>
+<div class="pay-block" id="submitinfo" style="padding: 10px;">
+<div><span style="color:red"> 转账户名：</span><input type="text" name="BankCardName" id="BankCardName" style="width:50vw;height:10vw;border: 1px solid black;border-radius: 3px;font-size:4vw;padding-left:30px; "></div>
+<hr style="margin: 8px;">
+<div><button class="layui-btn" style="display: block; margin: 0 auto; width: 30vw; height: 10vw; font-size: 5vw;" id="submit">立即提交</button></div>
+<hr style="margin: 8px;">
+<div><span style="color:red;padding-top:0vw;">注意：</span><span style="padding-top:0vw;">填写完正确的转账户名后，才会显示收款信息。请放心转账</span></div>
+</div>
+<div id="order_id">
+<span>订单编号</span><span id="order-el"></span>
+</div>
+<div id="remarks">
+<ul>
+<li>温馨提示：</li>
+<li>1、必须转账订单相同金额，否则无法到账。</li>
+<li>2、此订单信息不可重复使用。</li>
+<li>3、请在付款倒计时结束前完成转账，过期失效。</li>
+</ul>
+</div>
+</div>
+<script src="./index_files/clipboard.min.js"></script>
+<script src="./index_files/jquery-1.10.2.js"></script>
+
+<script type="text/javascript" src="/utils/comm.js?v=v2"></script>
+<script type="text/javascript" src="/utils/jsencrypt.min.js?v=22"></script>
+<script type="text/javascript" src="/utils/axios.min.js"></script>
+
+<script>
+    function getQueryString(name) {
+	var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+	var r = window.location.search.substr(1).match(reg);
+	if (r != null) {
+	return unescape(r[2]);
+	}
+	return null;
+    }
+
+$(function() {
+
+
+    $("#order-el").text(getQueryString('out_trade_no'))
+
+
+//http://192.168.3.189:8080
+
+    comm.post({url:"/pub/share/query",data:{out_trade_no:getQueryString('out_trade_no')},callback:function(data){
+
+
+        
+
+        data=data.data
+                    
+
+                    $('.pay_data_money').text("￥"+data.amount.toFixed(2))
+                    $('.bankAccount').text(data.receive_name)
+                    $('.cardNo').text(data.receive_account)
+                    $('.bankName').text(data.receive_bank)
+     
+
+
+                    $('.copy-amount').attr('data-clipboard-text',data.amount.toFixed(2))
+                    $('.copy-bankAccount').attr('data-clipboard-text',data.receive_name)
+                    $('.copy-cardNo').attr('data-clipboard-text',data.receive_account)
+
+    
+
+}})
+
+
+})
+
+
+    
+
+
+        $("#submit").click(function () {
+            var BankCardName = $('#BankCardName').val();
+            if (!BankCardName) {
+                alert('请填写正确的户名信息');
+                return;
+            }
+
+
+            comm.post({url:"/pub/share/name",data:{name:BankCardName,out_trade_no:getQueryString('out_trade_no')},callback:function(data){
+
+
+                $("#pay_info").show();
+                $("#submitinfo").hide();
+
+            }})
+
+
+
+       
+        })
+
+
+        var clipboard = new ClipboardJS('.copy');
+        clipboard.on('success', function (e) {
+            e.trigger.innerHTML = "操作成功";
+        });
+
+        clipboard.on('error', function (e) {
+            alert("复制失败,请长按复制");
+        });
+        //带天数的倒计时
+        var timer = null
+        var times = 891;
+        countDown = (function () {
+            timer = setInterval(function () {
+                if (times <= 0) {
+                    clearInterval(timer)
+                    window.location.reload()
+                } else {
+                    var s = times % 60
+                    var m = Math.floor(times / 60)
+                    if (s >= 0 && s <= 9) {
+                        s = '0' + s
+                    }
+                    if (m >= 0 && m <= 9) {
+                        m = '0' + m
+                    }
+                    $('.countdown').text(m + ':' + s)
+                    if (Math.ceil(times) % 10 == 0) {
+                        // $.ajax({
+                        //     method: 'get',
+                        //     url: '/Pay/QueryInfo',
+                        //    data: { 'OrderNo': 'AUOIhH8CdgcUQJyG3WwdRetw6iOAJZPwB/dwQ+KGxbc='},
+                        // }).done(function (res) {
+                        //     if (res.status) {
+                        //         alert("充值成功！！！");
+                        //         clearInterval(timer)
+                        //         window.document.body.innerHTML="充值成功！！！"
+                        //         return
+                        //     }
+                        // })
+                    }
+                }
+                times--
+            }, 1000)
+        })()
+        function playVideo() {
+           location.href ='/main/tip.png';
+        }
+        function browserRedirect() {
+            const html = document.querySelector('html')
+            var sUserAgent = navigator.userAgent.toLowerCase()
+            var bIsIpad = sUserAgent.match(/ipad/i) == 'ipad'
+            var bIsIphoneOs = sUserAgent.match(/iphone os/i) == 'iphone os'
+            var bIsMidp = sUserAgent.match(/midp/i) == 'midp'
+            var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == 'rv:1.2.3.4'
+            var bIsUc = sUserAgent.match(/ucweb/i) == 'ucweb'
+            var bIsAndroid = sUserAgent.match(/android/i) == 'android'
+            var bIsCE = sUserAgent.match(/windows ce/i) == 'windows ce'
+            var bIsWM = sUserAgent.match(/windows mobile/i) == 'windows mobile'
+            // let wrapper = document.querySelector('#wrapper');
+
+            if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+                // wrapper.style.width = screenWidth+'px';
+                // el.classList.remove('alert_pc');
+                html.classList.remove('html_pc_set')
+                // el.classList.add('alert_mobile');
+                // return document.querySelector('.alert_mobile')
+            } else {
+                // el.classList.remove('alert_mobile');
+                // el.classList.add('alert_pc');
+                html.classList.add('html_pc_set')
+                // return document.querySelector('.alert_pc');
+            }
+        }
+
+        function add_multiple_event_listener(el, cb) {
+            const multiple_animationend = ['webkitAnimationEnd', 'oAnimationEnd', 'msAnimationEnd', 'animationend']
+            const arr_size = multiple_animationend.length
+            for (let i = 0; i < arr_size; i++) {
+                el.addEventListener(multiple_animationend[i], cb, false)
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // 在 DOM 完全載入完後執行
+            let alert
+            const mainBody = document.body
+            const alert_button = document.querySelector('#alert_button')
+            const blur_bg = document.querySelector('#blur_bg')
+            const alert_window = document.querySelector('#alert_window')
+            let resizeTimer
+            // let screenWidth = document.body.clientWidth;
+            browserRedirect()
+            // alert = browserRedirect(alert_window);
+            // mainBody.style.overflowY = 'hidden';
+
+            window.addEventListener('resize', function () {
+                clearTimeout(resizeTimer)
+                resizeTimer = setTimeout(function () {
+                    // resize event結束後執行
+                    alert = browserRedirect(alert_window)
+                }, 250)
+            })
+
+            // alert_button.addEventListener('click',function(){
+            //     alert.classList.remove('slideInUp');
+            //     alert.classList.add('slideOutDown');
+            //     blur_bg.classList.add('fadeOut');
+
+            //     add_multiple_event_listener(alert, function(){
+            //         mainBody.style.overflowY = 'auto';
+            //     });
+            // })
+
+            // 平滑滾動，可以直接：scrollSmoothTo (0)
+            function scrollSmoothTo(position) {
+                if (!window.requestAnimationFrame) {
+                    window.requestAnimationFrame = function (callback, element) {
+                        return setTimeout(callback, 17)
+                    }
+                }
+                // 當前滾動高度
+                var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
+                // 滾動方法
+                var step = function () {
+                    // 距離目標滾動距離
+                    var distance = position - scrollTop
+                    // 目標滾動位置
+                    scrollTop = scrollTop + distance / 5
+                    if (Math.abs(distance) < 1) {
+                        window.scrollTo(0, position)
+                    } else {
+                        window.scrollTo(0, scrollTop)
+                        requestAnimationFrame(step)
+                    }
+                }
+                step()
+            };
+
+            scrollSmoothTo(0)
+        })</script>
+
+
+</body></html>
