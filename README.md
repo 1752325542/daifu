@@ -2,8 +2,9 @@
 	1. 支持 农业银行  工商银行 邮政银行  招商银行  平安银行 交通银行 兴业银行 平安银行 浦发银行  招商银行 自动收款回调，自动转账
 	1. 支持宝塔Linux面板
 	2. 视频效果见doc目录：中行.mp4,工行.mp4,建行.mp4,农行.mp4,支付宝.mp4
-	3.支持印度paytm自动转账，自动收款回调
-	4. 售后服务请联系 Telegram：@live0086
+	3. 支持印度paytm自动转账，自动收款回调
+	4. 支持云手机（虚拟机）
+	5. 售后服务请联系 Telegram：@live0086
 # 转账App截图
 ![image](https://github.com/1752325542/daifu/blob/master/doc/1x.png)
 ![image](https://github.com/1752325542/daifu/blob/master/doc/2x.png)
